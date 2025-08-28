@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Dnd-Glimmermere]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>Dnd-Glimmermere</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 28 Aug 2025 16:48:16 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 28 Aug 2025 16:48:13 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[World Board]]></title><description><![CDATA[ Create Outline Create Point of Interest Create Room Create Encounter Button ID not Found Create Hub(town/village/multi place) Create Region Button ID not Found Create Group Create Culture Fact Create Race Create Epic Create God Create Journal Create Quest Create Item Create Event Create Festival Create Realm Create Player Create Player Knowledge]]></description><link>0-dm-toolkit/screens/world-board.html</link><guid isPermaLink="false">0-Dm Toolkit/Screens/World Board.md</guid><pubDate>Sun, 17 Aug 2025 15:28:46 GMT</pubDate></item><item><title><![CDATA[DM Screen]]></title><description><![CDATA[Dataview: No results to show for table query.Base: ​ Dataview: No results to show for table query.]]></description><link>0-dm-toolkit/screens/dm-screen.html</link><guid isPermaLink="false">0-Dm Toolkit/Screens/DM Screen.md</guid><pubDate>Sun, 17 Aug 2025 13:54:43 GMT</pubDate></item><item><title><![CDATA[Landing]]></title><link>0-dm-toolkit/screens/landing.html</link><guid isPermaLink="false">0-Dm Toolkit/Screens/Landing.md</guid><pubDate>Fri, 20 Jun 2025 06:13:16 GMT</pubDate></item><item><title><![CDATA[Things to Learn]]></title><description><![CDATA[-- See <a data-href="Template Design" href="0-dm-toolkit/obsidian-design/template-design.html" class="internal-link" target="_self" rel="noopener nofollow">Template Design</a> -- InlineCustom frame(See player demiplane)]]></description><link>0-dm-toolkit/learn/things-to-learn.html</link><guid isPermaLink="false">0-Dm Toolkit/Learn/Things to Learn.md</guid><pubDate>Sat, 07 Jun 2025 16:50:35 GMT</pubDate></item><item><title><![CDATA[Formatting]]></title><description><![CDATA[Something I hear a lot from new users to Obsidian is that they don't know Markdown and they are afraid they wont be able to learn how to use it. Let me just start with this... Markdown is very easy to both use and learnIf you have come from a tool like Word or OneNote, you are probably used to seeing a toolbar that has all your options for changing the Font, Bold, Underline, Italics, etc. Obsidian does not have this bar which sometimes creates panic in new users. People are naturally afraid of change.
+Obsidian does not have this bar though... because you don't need it. What Is Markdown
+The non-technical way to explain Markdown... It's basically a way to take plain-text and make it look pretty.
+It lets you apply Themes on your plain text notes!
+If you still need a format bar
+Then you can install them via the community plugins.
+<a data-tooltip-position="top" aria-label="obsidian://show-plugin?id=editing-toolbar" rel="noopener nofollow" class="external-link is-unresolved" href="./obsidian:/show-plugin?id=editing-toolbar" target="_self">Editing Toolbar</a> or <a data-tooltip-position="top" aria-label="obsidian://show-plugin?id=obsidian-markdown-formatting-assistant-plugin" rel="noopener nofollow" class="external-link is-unresolved" href="./obsidian:/show-plugin?id=obsidian-markdown-formatting-assistant-plugin" target="_self">Markdown Formatting Assistant</a> will add some toolbar options. They might help you learn Markdown initially while you find you need them less and less and you gain confidence. Headings are very easy to do. Simply type `# space heading name.
+You can add more #'s to change the size of the Heading.
+Headings can also fold under each other. That means you can expand/fold a heading and all content under that heading leaver will be impacted. If you fold a level 1 heading that has level 2 and 3 headings/content under it, then all of the level 1, 23 and 3 content will fold with it. Example
+“Obsidian_RrEKxtUpcc.gif” could not be found.
+Try by copying the following into a note. # This is a heading 1
+You can type your content under the headings ## This is a heading 2
+### This is a heading 3 #### This is a heading 4
+##### This is a heading 5
+###### This is a heading 6
+You can BOLD text simply by highlighting it and pressing Ctrl+B.
+Alternatively you can make text BOLD by typing at the start and the end of the text you wish to BOLD**. **This text will be bold**
+__This will also be bold__
+You can ITALICS text simply by highlighting it and pressing Ctrl+I.
+Alternatively you can make text ITALICS by typing at the start and the end of the text you wish to ITALICS*. *This text will be italic*
+_This will also be italic_
+Underline is not supported by Markdown.
+Sorry to be the one to tell you this. I know it hurts. HTML Underline
+If you absolutely can't live without Underline, then Obsidian also supports HTML so you can do this:
+Example: This is some&nbsp;&lt;u&gt;underlined&lt;/u&gt;&nbsp;text.
+Anything between the and will be underlined. Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
+Any word wrapped with two tildes (like this) will appear crossed out.Use two equal signs to ==highlight text==.
+Use two equal signs to highlight text.Linking to other notes can be done very easily.
+Example: [[NoteName]]If you want to show a custom name for the link you can add a pipe | after the NoteName and type the new name for the link.
+Example: [[NoteName|NewLinkName]]You can also link to a sub-section of a note. Sections are created using # Headings.
+Example: [[NoteName#HeadingName]]Markdown style links can be used to refer to either external objects, such as web pages, or an internal page or image.http://obsidian.md - automatic!
+[Obsidian](http://obsidian.md)
+<br><a rel="noopener nofollow" class="external-link is-unresolved" href="http://obsidian.md" target="_self">http://obsidian.md</a> - automatic!<br>
+<a data-tooltip-position="top" aria-label="http://obsidian.md" rel="noopener nofollow" class="external-link is-unresolved" href="http://obsidian.md" target="_self">Obsidian</a>You can link to YouTube videos like this also. This will render the YouTube video in side your note. ![](Youtube.com)
+Instead of having just a link to a note; you can embed it in your note.
+Example: ![[NoteName]]This works with sub-sections too.
+Example: ![[NoteName#HeadingName]]Obsidian recognizes the following file formats right now:
+Markdown files: md;
+Image files: png, jpg, jpeg, gif, bmp, svg;
+Audio files: mp3, webm, wav, m4a, ogg, 3gp, flac;
+Video files: mp4, webm, ogv;
+PDF files: pdf.
+All these types of files can be embedded in a note.<br>See <a data-href="How To - Add Images" href=".html" class="internal-link" target="_self" rel="noopener nofollow">How To - Add Images</a> - Item 1
+- Item 2 - Item 2a - Item 2b 1. Item 1
+2. Item 2
+3. Item 3 4. Item 3a 5. Item 3b Item 1
+Item 2 Item 2a
+Item 2b Item 1
+Item 2
+Item 3
+4. Item 3a
+5. Item 3b
+&gt; Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society. \- Doug Engelbart, 1961 Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.
+- Doug Engelbart, 1961- [x] #tags, [links](), **formatting** supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [?] this is also a complete item (works with every character)
+- [ ] this is an incomplete item
+- [ ] tasks can be clicked in Preview to be checked off <br><a href=".?query=tag:tags" class="tag is-unresolved" target="_self" rel="noopener nofollow" data-href="#tags">#tags</a>, <a data-tooltip-position="top" aria-label="" rel="noopener nofollow" class="external-link is-unresolved" href="" target="_self">links</a>, formatting supported
+list syntax required (any unordered or ordered list supported)
+this is a complete item
+this is also a complete item (works with every character)
+this is an incomplete item
+tasks can be clicked in Preview to be checked off
+<br>Tables in Markdown are not fantastic. This is the honest truth. They work but please go and install the <a data-tooltip-position="top" aria-label="obsidian://show-plugin?id=table-editor-obsidian" rel="noopener nofollow" class="external-link is-unresolved" href="./obsidian:/show-plugin?id=table-editor-obsidian" target="_self">Advanced Tables</a> plugin to make your life easier. This is an example table. Which is written in Markdown like this. | Column 1 | Column 2 |
+| -------- | -------- |
+| Cell 1 | Cell 2 |
+| Cell 3 | Cell 4 | Use %% to enclose comments, which will be parsed as Markdown, but will not show up in the preview.
+This can be handy for leaving yourself notes. I use these to comment on how or why I did something. Here is some inline comments: %%You can't see this text%% (Can't see it) Here is a block comment:
+%%
+It can span
+multiple lines
+%%
+Here is some inline comments: (Can't see it)Here is a block comment:]]></description><link>0-dm-toolkit/obsidian-design/formatting.html</link><guid isPermaLink="false">0-Dm Toolkit/Obsidian Design/Formatting.md</guid><pubDate>Fri, 06 Jun 2025 22:18:15 GMT</pubDate></item><item><title><![CDATA[Template Design]]></title><description><![CDATA[⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠ You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'Planet Region Honestly i dont need this. But someone might. A region that contains groups of the things below. HUBS City Town Village Encampment Keep Fortress Stronghold PLACES Commerce Agriculture Military Philosophy Industrial Nesting Government (Economics and Entertainment) - Shops, Malls, Theatres, Markets, Carnivals, Electronics (Resource Production and Collection) - Farms, Mines, Fisheries, Lumber Yards, Oil Rigs, Power Plants (Protection and Transportation) - Forts, Bases, Armories, Walls, Seaports, Airports, Spaceports (Religion and Education) - Houses of Worship, Schools, Universities, Laboratories, Arboretums (Resource Utilization and Processing) - Factories, Metalworks, Bakeries, Artisans, Jewelers (Housing and Civil Engineering) - Residential Areas, Bridges, Parks, Inns/Hotels (Legislation and Judicial) - Town Halls, Courthouses, Tourist Stops, Monuments/Landmarks PERSON POINTS OF INTEREST QUESTS GROUPS Guilds Cults Military Orgs Primary Quests Dungeons Encounters Religious ITEMS ]]></description><link>0-dm-toolkit/obsidian-design/template-design.html</link><guid isPermaLink="false">0-Dm Toolkit/Obsidian Design/Template Design.md</guid><pubDate>Fri, 06 Jun 2025 20:16:58 GMT</pubDate></item></channel></rss>
