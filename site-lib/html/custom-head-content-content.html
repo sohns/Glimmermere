@@ -2,8 +2,25 @@
 a[data-link-dmKnowledge=true]{
     display: none
 }
+div[role=listitem]{
+       
+}
 .svg-icon.lucide-plus{
     display: none
+}
+input, .mb-input.mb-input-inline {
+  border: none; /* Removes the default border */
+  background-color: transparent; /* Makes the background transparent */
+  cursor: default; /* Change cursor to default */
+
+  /* Prevent resizing */
+  resize: none;
+
+  /* Prevent text selection */
+  user-select: none;
+
+  /* Prevent pointer events (like clicking, typing) */
+  pointer-events: none;
 }
 textarea {
   /* Visually indicate a disabled state */
