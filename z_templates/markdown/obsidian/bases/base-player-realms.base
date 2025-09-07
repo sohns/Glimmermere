@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.tags.contains("Category/Realm")
+        - file.path.startsWith("2.5")
+    order:
+      - file.name
+      - aliases
+      - Purpose
