@@ -1,8 +1,7 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
   // JavaScript code goes here
-  console.log("Hello from the head!");
-  $(document).ready(function() {
+  window.addEventListener("load", function() {
     $('textarea').each(function() {
         var $textarea = $(this);
         var parentData = $textarea.parent().data('internal-value');
@@ -59,5 +58,6 @@ textarea {
 
   /* Prevent pointer events (like clicking, typing) */
   pointer-events: none;
+  width: 100%;
 }
 </style>
