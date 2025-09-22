@@ -10,10 +10,38 @@
             $textarea.val(parentData);
         }
     });
+    $('div[class*="additional-label-"]').each(function() {
+        var $container = $(this);
+
+        // Extract the "Something" part from the class name
+        var match = $container.attr('class').match(/additional-label-([^\s]+)/);
+        if (!match) return;
+        var label = match[1];
+
+        // Step 1: Walk down the tree into the first child until none exist
+        var $lowest = $container;
+        while ($lowest.children().length > 0) {
+            $lowest = $lowest.children().first();
+        }
+
+        // Prepend "Something: " at the bottom-most element
+        $lowest.prepend(label + ': ');
+
+        // Step 2: search parent's children for another "Something:" and remove it
+        $container.parent().children().each(function() {
+            var $sibling = $(this);
+            if ($sibling[0] !== $container[0] && $sibling.text().trim().startsWith(label + ':')) {
+                $sibling.remove();
+            }
+        });
+    });
   });
 </script>
 
 <style>
+.mb-inline-list-add{
+  color:black;
+}
 a[data-link-dmKnowledge=true]{
     display: none
 }
