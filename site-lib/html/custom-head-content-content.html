@@ -30,6 +30,10 @@ p[dir="auto"] {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+p:empty,
+p:blank { /* :blank is not widely supported yet */
+  display: none;
+}
 .mb-input-wrapper {
   display: inline-block;
   margin-left: 0.5em;
