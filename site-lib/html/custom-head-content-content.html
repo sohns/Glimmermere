@@ -9,7 +9,7 @@
         if (parentData !== undefined) {
             $textarea.val(parentData);
             $textarea.height(1);
-            $textarea.height($textarea.scrollHeight);
+            $textarea.height($textarea[0].scrollHeight);
         }
     });
     
