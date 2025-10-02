@@ -2,12 +2,14 @@
 <script>
   // JavaScript code goes here
   window.addEventListener("load", function() {
-    $('textarea').each(function() {
+   $('textarea').each(function() {
         var $textarea = $(this);
         var parentData = $textarea.parent().data('internal-value');
 
         if (parentData !== undefined) {
             $textarea.val(parentData);
+            $textarea.height(1);
+            $textarea.height($textarea.scrollHeight);
         }
     });
     
