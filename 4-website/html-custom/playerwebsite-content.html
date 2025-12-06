@@ -1,0 +1,123 @@
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+  // JavaScript code goes here
+  window.addEventListener("load", function() {
+      //Make text area work
+      $('textarea').each(function() {
+          var $textarea = $(this);
+          var parentData = $textarea.parent().data('internal-value');
+
+          if (parentData !== undefined) {
+              $textarea.val(parentData);
+              $textarea.height(1);
+              $textarea.height($textarea[0].scrollHeight);
+          }
+      });
+      //Let user submit passcode
+      const passcodeInput = document.getElementById('passcodeInput');
+      if (passcodeInput) {
+          const passcodeSubmit = document.getElementById('passcodeSubmit');
+          if (passcodeSubmit) {
+              passcodeSubmit.addEventListener('click', () => {
+                  const value = passcodeInput.value;
+                  localStorage.setItem('passcode', value);
+                  console.log('Passcode saved:', value);
+                  alert("Welcome:" + atob(value));
+              });
+          }
+      }
+      //Functions
+      //This one will get the yaml
+      function getYamlFieldValues(fieldName) {
+          const preBlock = document.querySelector('pre.frontmatter.language-yaml code.language-yaml');
+          if (!preBlock) return [];
+
+          const text = preBlock.textContent;
+          const regex = new RegExp(fieldName + '\\s*:\\s*\\n((?:\\s*-\\s*.+\\n?)+)');
+          const match = text.match(regex);
+
+          if (!match) return [];
+
+          return match[1]
+              .split('\n')
+              .map(line => line.trim().replace(/^- /, ''))
+              .filter(line => line.length > 0);
+      }
+      $('[data-callout="playerhidden"]').each(function() {
+          // 'this' refers to the current element in the loop
+          const $elem = $(this);
+          $elem.addClass("hiddenItem")
+          const playerName = $(this).find('.callout-title-inner').text().replace(' Hidden', '').trim();
+          const passcodeDecoded = atob(localStorage.getItem("passcode"));
+          if (playerName == passcodeDecoded) {
+              $elem.removeClass("hiddenItem")
+          }
+      });
+  });
+</script>
+
+<style>
+a[data-link-dmKnowledge=true]{
+    cursor: default !important;
+    pointer-events: none !important;        
+    text-decoration: none !important;
+    color: grey !important;
+}
+div[role=listitem]{
+       
+}
+p[dir="auto"] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+p:empty{ 
+  display: none;
+}
+.mb-input-wrapper {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.mb-inline-list-add, .mb-button-inner, hiddenItem{
+    display: none
+}
+body #center-content>.obsidian-document>.markdown-preview-sizer {
+  max-width: 100% !important;
+}
+.block-language-table-of-contents {
+  display: none;
+}
+
+input[type=text], .mb-input.mb-input-inline {
+  border: none; /* Removes the default border */
+  background-color: transparent; /* Makes the background transparent */
+  cursor: default; /* Change cursor to default */
+
+  /* Prevent resizing */
+  resize: none;
+
+  /* Prevent text selection */
+  user-select: none;
+
+  /* Prevent pointer events (like clicking, typing) */
+  pointer-events: none;
+}
+.mb-input-type-textArea{
+    width: 100% !important;
+}
+textarea {
+  /* Visually indicate a disabled state */
+  border: none; /* Removes the default border */
+  background-color: transparent; /* Makes the background transparent */
+  cursor: default; /* Change cursor to default */
+
+  /* Prevent resizing */
+  resize: none;
+
+  /* Prevent text selection */
+  user-select: none;
+
+  /* Prevent pointer events (like clicking, typing) */
+  pointer-events: none;
+  width: 100% !important;
+}
+</style>
