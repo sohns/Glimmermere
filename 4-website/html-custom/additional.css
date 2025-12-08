@@ -28,7 +28,7 @@ body #center-content>.obsidian-document>.markdown-preview-sizer {
   display: none;
 }
 
-input[type=text], .mb-input.mb-input-inline {
+input[type=text]:not(.ignore-text-css), .mb-input.mb-input-inline {
   border: none; /* Removes the default border */
   background-color: transparent; /* Makes the background transparent */
   cursor: default; /* Change cursor to default */

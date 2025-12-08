@@ -15,6 +15,7 @@ $('textarea').each(function() {
 //Code to let user submit passcode
 const passcodeInput = document.getElementById('passcodeInput');
       if (passcodeInput) {
+        passcodeInput.classList.add('.ignore-text-css');
           const passcodeSubmit = document.getElementById('passcodeSubmit');
           if (passcodeSubmit) {
               passcodeSubmit.addEventListener('click', () => {
